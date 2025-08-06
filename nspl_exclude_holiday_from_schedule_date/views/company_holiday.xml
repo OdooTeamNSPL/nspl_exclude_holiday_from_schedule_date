@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_company_holiday_form" model="ir.ui.view">
+        <field name="name">company.holiday.form</field>
+        <field name="model">company.holidays</field>
+        <field name="arch" type="xml">
+            <form string="Company Holiday">
+                <sheet>
+                    <group>
+                        <field name="holiday_date"/>
+                        <field name="name"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_company_holiday_tree" model="ir.ui.view">
+        <field name="name">company.holiday.tree</field>
+        <field name="model">company.holidays</field>
+        <field name="arch" type="xml">
+            <tree string="Company Holidays">
+                <field name="holiday_date"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_company_holiday" model="ir.actions.act_window">
+        <field name="name">Company Holidays</field>
+        <field name="res_model">company.holidays</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_company_holiday"
+              name="Company Holidays"
+              action="action_company_holiday"
+              parent="sale.menu_sales_config"/>
+
+</odoo>
