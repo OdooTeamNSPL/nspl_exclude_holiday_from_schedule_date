@@ -1,6 +1,6 @@
 {
     'name': 'Delivery Restriction on Holidays and Weekends',
-    'version': '18.0',
+    'version': '19.0.1',
     'summary':
         """
   Auto-adjusts delivery dates in sales orders to skip weekends and holidays, ensuring accurate, business-day-based scheduling.
